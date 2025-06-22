@@ -39,7 +39,7 @@
             ''
               cat > getmac <<EOF
               #! $SHELL
-              ifconfig wlan0 | grep -Eo ..\(\:..\){5} | tr -d :
+              ifconfig wlan0 | grep -Eo ..\(\:..\){5} | tr -d : | tr -d '\n'
               EOF
               chmod +x getmac
             '';
